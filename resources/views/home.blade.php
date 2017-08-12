@@ -8,7 +8,9 @@
                 <div class="panel-heading">Productos</div>
 
                 <div class="panel-body">
-                    No hay productos para mostrar!
+                   @foreach($usuarios as $usuario)
+    {{ $usuario->nombre }}
+                   @endforeach
                 </div>
             </div>
         </div>
