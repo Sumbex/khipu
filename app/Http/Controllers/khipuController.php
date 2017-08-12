@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\producto;
 use Illuminate\Http\Request;
 use Khipu;
 
 class khipuController extends Controller
 {
     
-public function testCompra(){
+public function testCompra($id){
+
+    $producto = producto::find($id);
+
+
 
 	$receiverId = 137821;
 	$secretKey = '85a0a909ad2f88ce31e9718854c6bc0e6868e283';
@@ -33,11 +38,12 @@ public function testCompra(){
     );
     $response = $payments->paymentsPost("Compra de prueba de la API" //Motivo de la compra
         , "CLP" //Moneda
-        , 100.0 //Monto
+        , $producto->precio //Monto
         , $opts //campos opcionales
         );
 
-    dd($response);
+
+   return redirect($response->getPaymentUrl());
     
 } catch (\Khipu\ApiException $e) {
     echo print_r($e->getResponseBody(), TRUE);
@@ -45,25 +51,6 @@ public function testCompra(){
 
 }
 
-public function testBancos(){
 
-    $receiverId = 137821;
-    $secretKey = '85a0a909ad2f88ce31e9718854c6bc0e6868e283';
-
-    $configuration = new Khipu\Configuration();
-    $configuration->setReceiverId($receiverId);
-    $configuration->setSecret($secretKey);
-    // $configuration->setDebug(true);
-
-    $client = new Khipu\ApiClient($configuration);
-    $banksApi = new Khipu\Client\BanksApi($client);
-
-    try {
-        $response = $banksApi->banksGet();
-        dd($response);
-    } catch (\Khipu\ApiException $e) {
-    echo print_r($e->getResponseBody(), TRUE);
-    }
-}
 
 }

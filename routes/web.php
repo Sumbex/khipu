@@ -35,3 +35,5 @@ Route::get('/home/crear', 'ProductoController@index');
 Route::post('/home/crear', 'ProductoController@crear');
 
 Route::get('/home/show/{id}', 'ProductoController@show');
+
+Route::post('/home/show/{id}', 'khipuController@testCompra');

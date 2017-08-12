@@ -6,11 +6,9 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-
-                Productos
-
-
-		<a href="/home" class="btn btn-info pull-right">Atras</a>
+<a href="/home" class="btn btn-info pull-right">Atras</a>
+                <label>Productos</label>
+		
                 </div>
 
                 <div class="panel-body">
@@ -36,9 +34,18 @@
 					<div class="product-stock">En Stock</div>
 					<br>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
+
+					<form method="post" action="/home/show/{{ $productos->id }}">
+
+					{{ csrf_field() }}
+
+
+						<button type="submit" class="btn btn-success">
 							Añadir al carro
 						</button>
+
+					</form>
+						
 					</div>
 					<hr>
 					
