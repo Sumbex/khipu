@@ -45,6 +45,8 @@ class ProductoController extends Controller
     }
 
     public function show($id){
+
+
         $productos = producto::find($id);
 
         return view('producto/show')->with('productos',$productos);
