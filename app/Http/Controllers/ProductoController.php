@@ -15,10 +15,7 @@ class ProductoController extends Controller
 
 	public function index(){
 
-
-        $productos = producto::all();
-
-		return view('producto.crear', compact('productos'));
+		return view('producto/crear');
 	}
 
     public function crear(Request $request){
@@ -46,4 +43,12 @@ class ProductoController extends Controller
         return redirect('/home');
        
     }
+
+    public function show($id){
+        $productos = producto::find($id);
+
+        return view('producto/show')->with('productos',$productos);
+    }
+
+
 }

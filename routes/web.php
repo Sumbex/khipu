@@ -33,3 +33,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/crear', 'ProductoController@index');
 
 Route::post('/home/crear', 'ProductoController@crear');
+
+Route::get('/home/show/{id}', 'ProductoController@show');

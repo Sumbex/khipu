@@ -8,9 +8,30 @@
                 <div class="panel-heading">Productos</div>
 
                 <div class="panel-body">
-                   @foreach($usuarios as $usuario)
-    {{ $usuario->nombre }}
+
+                @if(count($productos)>0)
+
+                    @foreach($productos as $producto)
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+
+            <a href="/home/show/{{ $producto->id }}">
+                
+               <img src="storage/productos/{{ $producto->foto }}" class="img-responsive">
+
+            </a>
+                    </div>
+
                    @endforeach
+                      
+
+                @else
+                        
+                    <p>No hay productos que mostrar</p>
+
+                @endif
+                 
                 </div>
             </div>
         </div>
