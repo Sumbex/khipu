@@ -17,9 +17,19 @@ Route::get('/pago', function () {
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
-Route::get('/pago', 'khipuController@Test');
+Route::get('/pago', 'khipuController@testCompra');
+
+Route::get('/banco', 'khipuController@testBancos');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home/crear', 'ProductoController@index');
+
+Route::post('/home/crear', 'ProductoController@crear');
