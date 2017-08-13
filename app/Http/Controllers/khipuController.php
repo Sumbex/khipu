@@ -30,7 +30,7 @@ public function testCompra($id){
     try {
     $opts = array(
         "transaction_id" => "MTI-100",
-        "return_url" => "http://mi-ecomerce.com/backend/return",
+        "return_url" => "http://127.0.0.1:8000/home",
         "cancel_url" => "http://mi-ecomerce.com/backend/cancel",
         "picture_url" => "http://mi-ecomerce.com/pictures/foto-producto.jpg",
         "notify_url" => "http://mi-ecomerce.com/backend/notify",

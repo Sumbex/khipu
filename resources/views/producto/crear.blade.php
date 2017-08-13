@@ -26,7 +26,8 @@
             <div class="form-group">
                 <label class="col-lg-3 control-label">Descripcion:</label>
                 <div class="col-lg-9">
-                    <input type="text" class="form-control" name="descripcion">
+                    
+                    <textarea class="form-control" name="descripcion"></textarea>
                 </div>
             </div>
             <div class="form-group">

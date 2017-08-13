@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\ProductoRequest;
 use App\producto;
+use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
@@ -18,7 +19,7 @@ class ProductoController extends Controller
 		return view('producto/crear');
 	}
 
-    public function crear(Request $request){
+    public function crear(ProductoRequest $request){
 
 
     	$filenameext = $request->file('foto')->getClientOriginalName();
