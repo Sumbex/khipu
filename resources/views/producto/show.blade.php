@@ -41,7 +41,7 @@
 
 
 						<button type="submit" class="btn btn-success">
-							Añadir al carro
+							Comprar
 						</button>
 
 					</form>

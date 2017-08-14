@@ -36,7 +36,7 @@ public function testCompra($id){
         "notify_url" => "http://mi-ecomerce.com/backend/notify",
         "notify_api_version" => "1.3"
     );
-    $response = $payments->paymentsPost("Compra de prueba de la API" //Motivo de la compra
+    $response = $payments->paymentsPost($producto->nombre //Motivo de la compra
         , "CLP" //Moneda
         , $producto->precio //Monto
         , $opts //campos opcionales
