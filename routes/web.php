@@ -37,3 +37,6 @@ Route::post('/home/crear', 'ProductoController@crear');
 Route::get('/home/show/{id}', 'ProductoController@show');
 
 Route::post('/home/show/{id}', 'khipuController@testCompra');
+
+Route::get('/home/aceptar', 'khipuController@aceptar');
+Route::get('/home/cancelar', 'khipuController@cancelar');
