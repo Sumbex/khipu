@@ -10,10 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 
-Route::get('/pago', function () {
-    return  "as";
-});
+Route::get('/home/createReceiver', 'khipuController@crearIntegrador');
 
+Route::get('/test', function () {
+    return env('KHIPU_APP_KEY');
+});
 */
 
 Route::get('/', function () {
@@ -40,3 +41,9 @@ Route::post('/home/show/{id}', 'khipuController@testCompra');
 
 Route::get('/home/aceptar', 'khipuController@aceptar');
 Route::get('/home/cancelar', 'khipuController@cancelar');
+
+//Facebook Socialite
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+
+
