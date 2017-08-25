@@ -43,7 +43,7 @@ Route::get('/home/aceptar', 'khipuController@aceptar');
 Route::get('/home/cancelar', 'khipuController@cancelar');
 
 //Facebook Socialite
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::post('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 

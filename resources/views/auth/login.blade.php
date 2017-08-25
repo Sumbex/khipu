@@ -57,9 +57,20 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
                                 </a>
+
                             </div>
                         </div>
                     </form>
+                    <div class="form-group">
+                    <form class="form-horizontal" action="/login/facebook" method="post">
+                     {{ csrf_field() }}
+                        <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                   Iniciar sesión usando Facebook
+                                </button>
+                            </div>
+                    </form>
+                        </div>
                 </div>
             </div>
         </div>
