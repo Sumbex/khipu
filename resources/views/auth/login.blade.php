@@ -71,6 +71,16 @@
                             </div>
                     </form>
                         </div>
+                        <div class="form-group">
+                    <form class="form-horizontal" action="/login/google" method="post">
+                     {{ csrf_field() }}
+                        <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-danger">
+                                   Iniciar sesión usando Google
+                                </button>
+                            </div>
+                    </form>
+                        </div>
                 </div>
             </div>
         </div>
