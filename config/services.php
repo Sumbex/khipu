@@ -37,13 +37,13 @@ return [
     'facebook' => [
     'client_id' => env('FACEBOOK_APP_ID'),
     'client_secret' => env('FACEBOOK_APP_KEY'),
-    'redirect' => 'http://localhost:8000/login/facebook/callback',
+    'redirect' => 'https://www.exod.cl/login/facebook/callback',
     ],
 
     'google' => [
     'client_id' => env('GOOGLE_APP_ID'),
     'client_secret' => env('GOOGLE_APP_KEY'),
-    'redirect' => 'http://localhost:8000/login/google/callback',
+    'redirect' => 'https://www.exod.cl/login/google/callback',
     ],
 
 ];
